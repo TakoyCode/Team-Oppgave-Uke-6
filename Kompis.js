@@ -31,12 +31,13 @@ var buddies = [{
 },
 {
     name: "Marius Aalto",
-    imgSrc: "Team-Oppgave-Uke-6/Images/marius.png",
+    imgSrc: "Images/marius.png",
     correctGreeting: driver.greeting[1],
     positiveResponse: "Åherrejemini! Så snålt det var å hilse på deg'a",
     negativeResponse: "Marius pælmer Pilk på bilen din!"
 
 }
+
 ];
 
 function getRandomBuddy() {

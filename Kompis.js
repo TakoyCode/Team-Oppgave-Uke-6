@@ -42,34 +42,34 @@ var buddies = [{
 function getRandomBuddy() {
     var randomBuddy = Math.floor(Math.random() * buddies.length);
     selectedBuddy = buddies[randomBuddy];
-    updateView()
+    updateView();
     // document.getElementById("buddyName").innerHTML = selectedBuddy.name
     // document.getElementById("buddyResponse").innerHTML = ""
-    console.log(selectedBuddy)
+    console.log(selectedBuddy);
 }
 
 function greetBuddy1() {
     buddyGreeted = driver.greeting[1];
-    console.log(buddyGreeted)
-    checkGreeting()
+    console.log(buddyGreeted);
+    checkGreeting();
 }
 
 function greetBuddy2() {
     buddyGreeted = driver.greeting[0];
-    console.log(buddyGreeted)
-    checkGreeting()
+    console.log(buddyGreeted);
+    checkGreeting();
 }
 
 function checkGreeting() {
     switch (selectedBuddy.correctGreeting) {
         case buddyGreeted:
             responseText = selectedBuddy.positiveResponse;
-            meterValue++
-            break
+            meterValue++;
+            break;
         default:
             responseText = selectedBuddy.negativeResponse;
-            meterValue--
+            meterValue--;
     }
-    console.log(checkGreeting)
+    updateView();
 }
 
